@@ -3,5 +3,3 @@ const {
   add,
   remove
 } = require('./contatsManager.js');
-
-list();

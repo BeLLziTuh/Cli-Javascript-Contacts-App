@@ -1,9 +1,23 @@
+const fs = require('fs');
+
 function getList() {
-  console.log('Lista adicionada como objeto');
+  return (JSON.parse(fs.readFileSync('./list.json', 'utf8')));
 };
 
 function list() {
-  console.log('Lista de contatos:');
+  let listObj = getList(),
+  list = '';
+  if (listObj.length == 0) {
+    list = 'Empty list!';
+  } else if (listObj.length == 1) {
+    list += `Contacts list:\n${listObj[0].name} ${listObj[0].number}`;
+  } else {
+    list += 'Contacts list:';
+    listObj.map(contact => {
+      list += `\n${contact.name} ${contact.number}`;
+    });
+  };
+  console.log(list);
 };
 
 function add() {
