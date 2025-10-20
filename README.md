@@ -1,5 +1,3 @@
-# 👾 CLI CONTACTS MINI APP
-
 ## 📇 Command Line Contacts App
 
 A simple **Command Line Contacts App** built entirely with **JavaScript** to practice and improve my CLI programming skills.
