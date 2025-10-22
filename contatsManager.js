@@ -10,7 +10,7 @@ function list() {
   if (listObj.length == 0) {
     list = 'Empty list!';
   } else if (listObj.length == 1) {
-    list += `Contacts list:\n${listObj[0].name} ${listObj[0].number}`;
+    list = `Contacts list:\n${listObj[0].name} ${listObj[0].number}`;
   } else {
     list += 'Contacts list:';
     listObj.map(contact => {
